@@ -9,13 +9,9 @@ export const name_validation = {
       value: true,
       message: 'الزامی',
     },
-    pattern: {
-      value: /^[a-zA-Z\s]*$/,
-      message: 'Wrong format',
-    },
     maxLength: {
-      value: 20,
-      message: 'Length exceeded',
+      value: 30,
+      message: 'حداکثر 30 حرف',
     },
   },
 }

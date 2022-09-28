@@ -2,10 +2,9 @@ import { Form } from './components/form'
 
 function App() {
   return (
-    <div>
-      رزرو جلسه مشاوره
+    <main>
       <Form />
-    </div>
+    </main>
   )
 }
 

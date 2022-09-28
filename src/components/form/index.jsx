@@ -11,6 +11,13 @@ export const Form = ({ setSuccess }) => {
       <FormProvider {...methods}>
         <form className={css.form} onSubmit={e => e.preventDefault()}>
           <Input {...name_validation} />
+          <button
+            onClick={methods.handleSubmit(data => {
+              console.log(data)
+            })}
+          >
+            ارسال
+          </button>
         </form>
       </FormProvider>
     </div>

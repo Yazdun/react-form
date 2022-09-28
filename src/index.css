@@ -1,5 +1,12 @@
 @import url('./IRANYekan/fontiran.css');
 
+:root {
+  --clr-light: rgb(219, 219, 219);
+  --clr-dark: rgb(22, 22, 22);
+  --clr-danger: rgb(230, 18, 18);
+  --clr-active: ;
+}
+
 *,
 *::before,
 *::after {
@@ -10,6 +17,23 @@
 
 body {
   font-family: IRANYekanXFaNum !important;
+  color: var(--clr-dark);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button,
+textarea,
+input {
+  font: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
 }
 
 /* remove animations for people who've turned them off */
