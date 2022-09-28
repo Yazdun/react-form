@@ -21,13 +21,6 @@ body {
   color: var(--clr-dark);
 }
 
-main {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 button,
 textarea,
 input {
@@ -46,6 +39,10 @@ input::-webkit-inner-spin-button {
 
 ul {
   list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* remove animations for people who've turned them off */
