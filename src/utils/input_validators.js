@@ -46,7 +46,7 @@ export const phone_validation = {
       message: 'الزامی',
     },
     pattern: {
-      value: /^0[0-9]{2,}[0-9]{7,}$/,
+      value: /^(?:0|98|\+98|\+980|0098|098|00980)?(9\d{9})$/,
       message: 'نامعتبر',
     },
   },

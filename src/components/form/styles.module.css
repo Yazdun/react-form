@@ -9,3 +9,25 @@
   flex-direction: column;
   gap: 1rem;
 }
+
+.cta {
+  background-color: var(--clr-active-1);
+  color: white;
+  padding: 1.25rem 1.563rem;
+  border-radius: 0.5rem;
+  transition: 0.3s background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+}
+
+.cta svg {
+  font-size: 1.2rem;
+}
+
+.cta:hover {
+  cursor: pointer;
+  background-color: var(--clr-active-2);
+}

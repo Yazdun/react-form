@@ -6,9 +6,14 @@ import {
 import { useForm, FormProvider } from 'react-hook-form'
 import css from './styles.module.css'
 import { Input } from '..'
+import { MdLocalPostOffice } from 'react-icons/md'
 
 export const Form = ({ setSuccess }) => {
   const methods = useForm()
+
+  const onSubmit = methods.handleSubmit(data => {
+    console.log(data)
+  })
 
   return (
     <div className={css.container}>
@@ -17,12 +22,9 @@ export const Form = ({ setSuccess }) => {
           <Input {...name_validation} />
           <Input {...phone_validation} />
           <Input {...desc_validation} />
-          <button
-            onClick={methods.handleSubmit(data => {
-              console.log(data)
-            })}
-          >
-            ارسال
+          <button className={css.cta} onClick={onSubmit}>
+            <MdLocalPostOffice />
+            ارسال اطلاعات
           </button>
         </form>
       </FormProvider>

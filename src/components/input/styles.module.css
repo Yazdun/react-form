@@ -5,7 +5,7 @@
 
 .input {
   padding: 1.25rem 1.563rem;
-  border: 1px solid var(--clr-light);
+  border: 1px solid var(--clr-light-1);
   border-radius: 0.5rem;
   width: 100%;
   font-weight: bold;
@@ -14,8 +14,8 @@
 }
 
 .input:focus {
-  border: 1px solid var(--clr-dark);
-  box-shadow: var(--clr-dark) 0px 0px 0px 1px;
+  border: 1px solid var(--clr-dark-1);
+  box-shadow: var(--clr-dark-1) 0px 0px 0px 1px;
 }
 
 .input::placeholder {
@@ -23,12 +23,12 @@
 }
 
 .error {
-  color: var(--clr-danger);
+  color: var(--clr-danger-1);
 }
 
 .error .input:focus {
-  box-shadow: var(--clr-danger) 0px 0px 0px 1px;
-  border: 1px solid var(--clr-danger);
+  box-shadow: var(--clr-danger-1) 0px 0px 0px 1px;
+  border: 1px solid var(--clr-danger-1);
 }
 
 .label {
