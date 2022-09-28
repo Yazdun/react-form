@@ -18,7 +18,12 @@ export const Form = ({ setSuccess }) => {
   return (
     <div className={css.container}>
       <FormProvider {...methods}>
-        <form className={css.form} onSubmit={e => e.preventDefault()}>
+        <form
+          className={css.form}
+          onSubmit={e => e.preventDefault()}
+          noValidate
+          autoComplete="off"
+        >
           <Input {...name_validation} />
           <Input {...phone_validation} />
           <Date />
