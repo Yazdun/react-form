@@ -3,7 +3,7 @@ export const name_validation = {
   label: 'نام',
   type: 'text',
   id: 'name',
-  placeholder: 'مهسا امینی',
+  placeholder: 'یزدان فتحعلی',
   validation: {
     required: {
       value: true,
