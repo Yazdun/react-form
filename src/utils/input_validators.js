@@ -15,3 +15,21 @@ export const name_validation = {
     },
   },
 }
+
+export const phone_validation = {
+  name: 'mobile',
+  label: 'موبایل',
+  type: 'number',
+  id: 'mobile',
+  placeholder: '09201378001',
+  validation: {
+    required: {
+      value: true,
+      message: 'الزامی',
+    },
+    pattern: {
+      value: /^0[0-9]{2,}[0-9]{7,}$/,
+      message: 'نامعتبر',
+    },
+  },
+}
