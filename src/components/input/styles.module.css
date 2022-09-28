@@ -35,3 +35,8 @@
   font-weight: 600;
   transition: 0.3s color;
 }
+
+.textarea {
+  min-height: 10rem;
+  resize: vertical;
+}

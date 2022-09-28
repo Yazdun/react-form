@@ -6,7 +6,15 @@ import { useFormContext } from 'react-hook-form'
 import { AnimatePresence } from 'framer-motion'
 import { InputError } from '../'
 
-export const Input = ({ name, label, type, id, placeholder, validation }) => {
+export const Input = ({
+  name,
+  label,
+  type,
+  id,
+  placeholder,
+  validation,
+  multiline,
+}) => {
   const {
     register,
     formState: { errors },
@@ -30,13 +38,23 @@ export const Input = ({ name, label, type, id, placeholder, validation }) => {
           )}
         </AnimatePresence>
       </div>
-      <input
-        id={id}
-        type={type}
-        className={css.input}
-        placeholder={placeholder}
-        {...register(`${name}`, validation)}
-      />
+      {multiline ? (
+        <textarea
+          id={id}
+          type={type}
+          className={cn(css.input, css.textarea)}
+          placeholder={placeholder}
+          {...register(`${name}`, validation)}
+        ></textarea>
+      ) : (
+        <input
+          id={id}
+          type={type}
+          className={css.input}
+          placeholder={placeholder}
+          {...register(`${name}`, validation)}
+        />
+      )}
     </div>
   )
 }

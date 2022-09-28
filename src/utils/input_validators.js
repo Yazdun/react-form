@@ -16,6 +16,24 @@ export const name_validation = {
   },
 }
 
+export const desc_validation = {
+  name: 'desc',
+  label: 'توضیحات',
+  multiline: true,
+  id: 'desc',
+  placeholder: 'توضیحات خود را بنویسید ...',
+  validation: {
+    required: {
+      value: true,
+      message: 'الزامی',
+    },
+    maxLength: {
+      value: 200,
+      message: 'حداکثر 200 حرف',
+    },
+  },
+}
+
 export const phone_validation = {
   name: 'mobile',
   label: 'موبایل',
