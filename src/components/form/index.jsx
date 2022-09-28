@@ -5,7 +5,7 @@ import {
 } from '../../utils/input_validators'
 import { useForm, FormProvider } from 'react-hook-form'
 import css from './styles.module.css'
-import { Input } from '..'
+import { Input, Date } from '..'
 import { MdLocalPostOffice } from 'react-icons/md'
 
 export const Form = ({ setSuccess }) => {
@@ -21,6 +21,7 @@ export const Form = ({ setSuccess }) => {
         <form className={css.form} onSubmit={e => e.preventDefault()}>
           <Input {...name_validation} />
           <Input {...phone_validation} />
+          <Date />
           <Input {...desc_validation} />
           <button className={css.cta} onClick={onSubmit}>
             <MdLocalPostOffice />
