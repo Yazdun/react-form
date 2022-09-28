@@ -1,9 +1,15 @@
+@import url('./IRANYekan/fontiran.css');
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: IRANYekanXFaNum !important;
 }
 
 /* remove animations for people who've turned them off */
