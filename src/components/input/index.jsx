@@ -1,10 +1,10 @@
 import React from 'react'
 import css from './styles.module.css'
 import cn from 'classnames'
-import { is_input_valid, find_input_error } from '@utils/index'
+import { is_input_valid, find_input_error } from '../../utils'
 import { useFormContext } from 'react-hook-form'
 import { AnimatePresence } from 'framer-motion'
-import { InputError } from '..'
+import { InputError } from '../'
 
 export const Input = ({ name, label, type, id, placeholder, validation }) => {
   const {
