@@ -2,6 +2,7 @@ import css from './styles.module.css'
 import * as moment from 'jalali-moment'
 import { useState } from 'react'
 import cn from 'classnames'
+import { Card } from '../card'
 
 export const Date = () => {
   const [active, setActive] = useState(1)
@@ -22,14 +23,10 @@ export const Date = () => {
 
           return (
             <li key={day}>
-              <button
-                onClick={() => setActive(i)}
-                className={cn(css.cta, isCurrent && css.active)}
-                disabled={isCurrent}
-              >
+              <Card onClick={() => setActive(i)} isCurrent={isCurrent}>
                 <span className={css.day}>{day}</span>
                 <span className={css.month}>{month}</span>
-              </button>
+              </Card>
             </li>
           )
         })}

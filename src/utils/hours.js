@@ -6,11 +6,6 @@ export const hours = [
   },
   {
     title: 'ظهر',
-    start: 13,
-    end: 15,
-  },
-  {
-    title: 'غروب',
     start: 16,
     end: 18,
   },

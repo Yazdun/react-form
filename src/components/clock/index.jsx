@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { hours } from '../../utils'
 import css from './styles.module.css'
-import cn from 'classnames'
+import { Card } from '../'
 
 export const Clock = () => {
   const [active, setActive] = useState(0)
@@ -15,15 +15,12 @@ export const Clock = () => {
           const isCurrent = active === idx
           return (
             <li key={title}>
-              <button
-                onClick={() => setActive(idx)}
-                className={cn(css.cta, isCurrent && css.active)}
-              >
+              <Card onClick={() => setActive(idx)} isCurrent={isCurrent}>
                 <p className={css.schedule}>سانس {title}</p>
                 <p>
                   <span>{start}:00</span> الی <span>{end}:00</span>
                 </p>
-              </button>
+              </Card>
             </li>
           )
         })}
