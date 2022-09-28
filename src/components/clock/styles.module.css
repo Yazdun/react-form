@@ -32,8 +32,19 @@
   pointer-events: none;
 }
 
+.cta:focus-visible {
+  cursor: pointer;
+  box-shadow: var(--clr-active-1) 0px 0px 0px 1px;
+  border: 1px solid var(--clr-active-1);
+}
+
 @media only screen and (min-width: 568px) {
   .list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta:hover {
+    box-shadow: var(--clr-active-1) 0px 0px 0px 1px;
+    border: 1px solid var(--clr-active-1);
   }
 }
