@@ -6,6 +6,7 @@
 .list {
   display: grid;
   gap: 1rem;
+  font-size: 0.9rem;
 }
 
 .cta {
@@ -38,7 +39,7 @@
   border: 1px solid var(--clr-active-1);
 }
 
-@media only screen and (min-width: 568px) {
+@media only screen and (min-width: 468px) {
   .list {
     grid-template-columns: repeat(3, 1fr);
   }

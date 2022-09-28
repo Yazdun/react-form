@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  font-size: 0.9rem;
 }
 
 .cta {

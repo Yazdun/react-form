@@ -16,6 +16,7 @@
   margin-top: 0.6rem;
   transition: 0.3s;
   font-weight: lighter;
+  font-size: 0.9rem;
 }
 
 .input:focus {
