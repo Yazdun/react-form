@@ -1,3 +1,39 @@
 .title {
   font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.list {
+  display: grid;
+  gap: 1rem;
+}
+
+.cta {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--clr-light-1);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  cursor: pointer;
+}
+
+.schedule {
+  margin-bottom: 1rem;
+}
+
+.active {
+  color: var(--clr-active-1);
+  box-shadow: var(--clr-active-1) 0px 0px 0px 1px;
+  border: 1px solid var(--clr-active-1);
+  pointer-events: none;
+}
+
+@media only screen and (min-width: 568px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
