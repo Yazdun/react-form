@@ -1,7 +1,7 @@
 import React from 'react'
 import css from './styles.module.css'
 import cn from 'classnames'
-import { is_input_valid, find_input_error } from '../../utils'
+import { is_form_invalid, find_input_error } from '../../utils'
 import { useFormContext } from 'react-hook-form'
 import { AnimatePresence } from 'framer-motion'
 import { InputError } from '../'
@@ -21,7 +21,7 @@ export const Input = ({
   } = useFormContext()
 
   const inputErrors = find_input_error(errors, name)
-  const isInvalid = is_input_valid(inputErrors)
+  const isInvalid = is_form_invalid(inputErrors)
 
   return (
     <div className={cn(css.container, isInvalid && css.error)}>
