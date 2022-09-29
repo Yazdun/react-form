@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 35rem;
   margin: auto;
-  padding: 5rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .inputs {
@@ -19,7 +19,7 @@
 
 .cta {
   background-color: var(--clr-active-1);
-
+  cursor: pointer;
   color: white;
   padding: 1.25rem 1.563rem;
   border-radius: 0.5rem;
@@ -32,16 +32,31 @@
 }
 
 .cta svg {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
-.cta:hover {
-  cursor: pointer;
+.cta:focus-visible {
+  box-shadow: var(--clr-dark-1) 0px 0px 0px 3px;
   background-color: var(--clr-active-2);
+}
+
+.link {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  font-weight: 900;
+}
+
+.link svg {
+  font-size: 1.3rem;
 }
 
 @media only screen and (min-width: 768px) {
   .inputs {
     flex-direction: row;
+  }
+
+  .cta:hover {
+    background-color: var(--clr-active-2);
   }
 }

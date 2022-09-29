@@ -7,6 +7,7 @@ import { useForm, FormProvider } from 'react-hook-form'
 import css from './styles.module.css'
 import { Input, Date, Clock } from '..'
 import { MdLocalPostOffice } from 'react-icons/md'
+import { FaGithub } from 'react-icons/fa'
 
 export const Form = ({ setSuccess }) => {
   const methods = useForm()
@@ -35,6 +36,16 @@ export const Form = ({ setSuccess }) => {
             <MdLocalPostOffice />
             ارسال اطلاعات
           </button>
+          <div className={css.github}>
+            <a
+              href="https://github.com/Yazdun/react-form"
+              target="_blank"
+              rel="noreferrer"
+              className={css.link}
+            >
+              <FaGithub /> سورس کد
+            </a>
+          </div>
         </form>
       </FormProvider>
     </div>
