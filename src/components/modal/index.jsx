@@ -7,7 +7,9 @@ import { VscChromeClose } from 'react-icons/vsc'
 import { motion } from 'framer-motion'
 import { framer_background, framer_modal } from './framer'
 
-export const Modal = ({ setOpen, data }) => {
+const defaultData = { name: 'یزدان', mobile: '09201378001' }
+
+export const Modal = ({ setOpen, data = defaultData }) => {
   const ref = useRef()
   const { name, mobile } = data
 
