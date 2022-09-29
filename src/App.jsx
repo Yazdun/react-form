@@ -1,10 +1,9 @@
-import { Form } from './components/form'
-import { Hero } from './components/hero'
+import { Form, Nav } from './components'
 
 function App() {
   return (
     <main>
-      <Hero />
+      <Nav />
       <Form />
     </main>
   )
