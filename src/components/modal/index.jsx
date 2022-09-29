@@ -14,8 +14,8 @@ export const Modal = ({ setOpen, data }) => {
   useOnClickOutside(ref, () => setOpen(false))
 
   const style = {
-    height: 300,
-    width: 300,
+    height: 200,
+    width: 200,
   }
 
   return (

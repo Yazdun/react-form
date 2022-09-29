@@ -45,4 +45,5 @@
   transition: 0.3s color;
   display: flex;
   cursor: pointer;
+  z-index: 1000;
 }
