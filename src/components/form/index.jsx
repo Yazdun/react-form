@@ -7,8 +7,8 @@ import { useForm, FormProvider } from 'react-hook-form'
 import css from './styles.module.css'
 import { Input, Date, Clock } from '..'
 import { MdLocalPostOffice } from 'react-icons/md'
-import { FaGithub } from 'react-icons/fa'
 import { useState } from 'react'
+import { SourceCode } from './Github'
 
 export const Form = ({ setModal, setData }) => {
   const methods = useForm()
@@ -52,21 +52,6 @@ export const Form = ({ setModal, setData }) => {
           <SourceCode />
         </form>
       </FormProvider>
-    </div>
-  )
-}
-
-const SourceCode = () => {
-  return (
-    <div className={css.github}>
-      <a
-        href="https://github.com/Yazdun/react-form"
-        target="_blank"
-        rel="noreferrer"
-        className={css.link}
-      >
-        <FaGithub /> سورس کد
-      </a>
     </div>
   )
 }

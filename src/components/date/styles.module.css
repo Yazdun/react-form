@@ -36,8 +36,8 @@
 }
 
 .day {
-  font-size: 1.3rem;
   font-weight: 900;
+  margin-bottom: 1rem;
 }
 
 @media only screen and (min-width: 768px) {

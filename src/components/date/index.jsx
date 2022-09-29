@@ -4,25 +4,41 @@ import { Card } from '../card'
 
 export const Date = ({ active, setActive }) => {
   const days = [1, 2, 3, 4, 5, 6]
+  const jDays = [
+    'شنبه',
+    'یکشنبه',
+    'دوشنبه',
+    'سه شنبه',
+    'چهارشنبه',
+    'پنج شنبه',
+    'جمعه',
+  ]
 
-  const generator = num =>
-    moment().add(num, 'day').locale('fa').format('D/MMMM')
+  const generator = num => {
+    const jDate = moment().add(num, 'day').locale('fa').format('D/MMMM')
+    const jDay = moment().add(num, 'day').locale('fa').jDay()
+    return { jDate, jDay }
+  }
+
+  // console.log()
 
   return (
     <div>
       <p className={css.title}>تاریخ</p>
       <ul className={css.list}>
         {days.map(i => {
-          const m = generator(i)
-          const day = m.split('/')[0]
-          const month = m.split('/')[1]
+          const { jDate, jDay } = generator(i)
+          const day = jDate.split('/')[0]
+          const month = jDate.split('/')[1]
           const isCurrent = active === i
 
           return (
             <li key={day}>
               <Card onClick={() => setActive(i)} isCurrent={isCurrent}>
-                <span className={css.day}>{day}</span>
-                <span className={css.month}>{month}</span>
+                <p className={css.day}>
+                  {day} {month}
+                </p>
+                <span className={css.month}>{jDays[jDay]}</span>
               </Card>
             </li>
           )
