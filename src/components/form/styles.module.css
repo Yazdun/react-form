@@ -54,6 +54,11 @@
   gap: 0.4rem;
   align-items: center;
   font-weight: 900;
+  transition: 0.3s;
+}
+
+.link:focus-visible {
+  box-shadow: var(--clr-dark-1) 0px 0px 0px 2px;
 }
 
 .link svg {
