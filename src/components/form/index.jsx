@@ -13,7 +13,8 @@ export const Form = ({ setSuccess }) => {
   const methods = useForm()
 
   const onSubmit = methods.handleSubmit(data => {
-    console.log(data)
+    setSuccess(true)
+    methods.reset()
   })
 
   return (
