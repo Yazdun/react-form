@@ -39,22 +39,34 @@ export const Form = ({ setModal, setData }) => {
           <Date active={date} setActive={setDate} />
           <Clock active={clock} setActive={setClock} />
           <Input {...desc_validation} />
-          <button className={css.cta} onClick={onSubmit}>
+          <button
+            disabled={
+              Object.keys(methods.formState.errors).length === 0 ? false : true
+            }
+            className={css.cta}
+            onClick={onSubmit}
+          >
             <MdLocalPostOffice />
             ارسال اطلاعات
           </button>
-          <div className={css.github}>
-            <a
-              href="https://github.com/Yazdun/react-form"
-              target="_blank"
-              rel="noreferrer"
-              className={css.link}
-            >
-              <FaGithub /> سورس کد
-            </a>
-          </div>
+          <SourceCode />
         </form>
       </FormProvider>
+    </div>
+  )
+}
+
+const SourceCode = () => {
+  return (
+    <div className={css.github}>
+      <a
+        href="https://github.com/Yazdun/react-form"
+        target="_blank"
+        rel="noreferrer"
+        className={css.link}
+      >
+        <FaGithub /> سورس کد
+      </a>
     </div>
   )
 }
