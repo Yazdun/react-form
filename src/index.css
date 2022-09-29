@@ -2,6 +2,7 @@
 
 :root {
   --clr-light-1: rgb(219, 219, 219);
+  --clr-light-2: #f5f6fa;
   --clr-dark-1: rgb(22, 22, 22);
   --clr-danger-1: rgb(230, 18, 18);
   --clr-active-1: #0066ff;
@@ -19,6 +20,7 @@
 body {
   font-family: IRANYekanXFaNum !important;
   color: var(--clr-dark);
+  background-color: var(--clr-light-2);
 }
 
 button,

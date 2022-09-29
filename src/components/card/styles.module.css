@@ -8,25 +8,25 @@
   justify-content: center;
   align-items: center;
   transition: 0.3s;
+  position: relative;
+  cursor: pointer;
 }
 
 .cta:focus-visible {
   cursor: pointer;
-  box-shadow: var(--clr-active-1) 0px 0px 0px 1px;
-  border: 1px solid var(--clr-active-1);
+  box-shadow: var(--clr-dark-1) 0px 0px 0px 1px;
+  border: 1px solid var(--clr-dark-1);
 }
 
 .active {
-  color: var(--clr-active-1);
-  box-shadow: var(--clr-active-1) 0px 0px 0px 1px;
-  border: 1px solid var(--clr-active-1);
+  color: var(--clr-dark-1);
+  box-shadow: var(--clr-dark-1) 0px 0px 0px 1px;
+  border: 1px solid var(--clr-dark-1);
   pointer-events: none;
 }
 
 @media only screen and (min-width: 768px) {
   .cta:hover {
-    cursor: pointer;
-    box-shadow: var(--clr-active-1) 0px 0px 0px 1px;
-    border: 1px solid var(--clr-active-1);
+    transform: scale(1.07);
   }
 }
