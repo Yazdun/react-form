@@ -3,13 +3,14 @@ import { useState } from 'react'
 import { Form, Modal, Nav } from './components'
 
 function App() {
-  const [open, setOpen] = useState(false)
+  const [modal, setModal] = useState(false)
+  const [data, setData] = useState(null)
   return (
     <main>
       <Nav />
-      <Form setSuccess={setOpen} />
+      <Form setModal={setModal} setData={setData} />
       <AnimatePresence>
-        {open && <Modal key="modal" setOpen={setOpen} />}
+        {modal && <Modal key="modal" setOpen={setModal} data={data} />}
       </AnimatePresence>
     </main>
   )

@@ -1,11 +1,8 @@
-import { useState } from 'react'
 import { hours } from '../../utils'
 import css from './styles.module.css'
 import { Card } from '../'
 
-export const Clock = () => {
-  const [active, setActive] = useState(0)
-
+export const Clock = ({ active, setActive }) => {
   return (
     <div>
       <p className={css.title}>ساعت</p>

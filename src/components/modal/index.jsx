@@ -7,8 +7,9 @@ import { VscChromeClose } from 'react-icons/vsc'
 import { motion } from 'framer-motion'
 import { framer_background, framer_modal } from './framer'
 
-export const Modal = ({ setOpen }) => {
+export const Modal = ({ setOpen, data }) => {
   const ref = useRef()
+  const { name, mobile } = data
 
   useOnClickOutside(ref, () => setOpen(false))
 
@@ -25,7 +26,11 @@ export const Modal = ({ setOpen }) => {
         </button>
         <Lottie animationData={animationData} loop="false" style={style} />
         <h1>ارسال شد</h1>
-        <p className={css.desc}>پیغام شما با موفقیت ارسال گردید</p>
+        <p className={css.desc}>
+          {name} عزیز, درخواست شما با موفقیت ثبت گردید. برای هماهنگی فرآیند
+          مشاوره, همکاران ما در اسرع وقت با شماره موبایل شما{' '}
+          <strong>{mobile}</strong> تماس خواهند گرفت
+        </p>
       </motion.div>
     </motion.div>
   )

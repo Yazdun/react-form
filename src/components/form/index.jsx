@@ -8,12 +8,18 @@ import css from './styles.module.css'
 import { Input, Date, Clock } from '..'
 import { MdLocalPostOffice } from 'react-icons/md'
 import { FaGithub } from 'react-icons/fa'
+import { useState } from 'react'
 
-export const Form = ({ setSuccess }) => {
+export const Form = ({ setModal, setData }) => {
   const methods = useForm()
+  const [date, setDate] = useState(1)
+  const [clock, setClock] = useState(0)
 
   const onSubmit = methods.handleSubmit(data => {
-    setSuccess(true)
+    setModal(true)
+    setData(data)
+    setDate(1)
+    setClock(0)
     methods.reset()
   })
 
@@ -30,8 +36,8 @@ export const Form = ({ setSuccess }) => {
             <Input {...name_validation} />
             <Input {...phone_validation} />
           </div>
-          <Date />
-          <Clock />
+          <Date active={date} setActive={setDate} />
+          <Clock active={clock} setActive={setClock} />
           <Input {...desc_validation} />
           <button className={css.cta} onClick={onSubmit}>
             <MdLocalPostOffice />

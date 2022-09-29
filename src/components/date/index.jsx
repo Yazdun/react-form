@@ -1,11 +1,8 @@
 import css from './styles.module.css'
 import * as moment from 'jalali-moment'
-import { useState } from 'react'
-import cn from 'classnames'
 import { Card } from '../card'
 
-export const Date = () => {
-  const [active, setActive] = useState(1)
+export const Date = ({ active, setActive }) => {
   const days = [1, 2, 3, 4, 5, 6]
 
   const generator = num =>

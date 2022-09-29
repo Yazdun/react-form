@@ -14,9 +14,11 @@
 
 .modal {
   padding: 0 2rem 4rem 2rem;
-  background-color: var(--clr-light-2);
-  box-shadow: var(--shadow-3);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-image: linear-gradient(
+    135deg,
+    var(--clr-light-2) 0%,
+    #c3cfe2 100%
+  );
 
   border-radius: 0.5rem;
   width: 100%;
@@ -31,6 +33,7 @@
 
 .desc {
   color: var(--clr-dark-3);
+  line-height: 2rem;
 }
 
 .cta {
@@ -41,8 +44,5 @@
   font-size: 2rem;
   transition: 0.3s color;
   display: flex;
-}
-
-.cta:hover {
-  color: white;
+  cursor: pointer;
 }
